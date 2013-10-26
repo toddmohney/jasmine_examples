@@ -1,6 +1,14 @@
-describe("function stubbing", function() {
-  describe("a global function", function() {
 
+// Example implementation
+function someMethod() {
+  return "hey hi ok bye";
+}
+
+
+// Jasmine Tests
+describe("function stubbing", function() {
+
+  describe("a global function", function() {
     describe("without applying the spy", function() {
       it("returns the result of original method", function() {
         expect(window.someMethod()).toEqual("hey hi ok bye");
@@ -13,6 +21,6 @@ describe("function stubbing", function() {
         expect(window.someMethod()).toEqual("stubbed value");
       });
     });
-
   });
+
 });
