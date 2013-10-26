@@ -1,31 +1,31 @@
 describe("global functions", function(){
   describe("named functions", function() {
     it("defines 'helloThere", function() {
-      expect(typeof(helloThere)).toEqual('function');
+      expect(typeof(window.helloThere)).toEqual('function');
     });
 
     it("defines helloThere as a named function", function() {
-      expect(helloThere.name).toEqual('helloThere');
+      expect(window.helloThere.name).toEqual('helloThere');
     });
   });
 
   describe("unnamed functions", function() {
     it("defines 'okThen", function() {
-      expect(typeof(okThen)).toEqual('function');
+      expect(typeof(window.okThen)).toEqual('function');
     });
 
     it("defines okThen as an unnamed function", function() {
-      expect(okThen.name).toEqual('');
+      expect(window.okThen.name).toEqual('');
     });
   });
 
   describe("anonymous functions", function() {
     it("defines 'byeNow", function() {
-      expect(typeof(byeNow)).toEqual('function');
+      expect(typeof(window.byeNow)).toEqual('function');
     });
 
     it("defines byeNow as an unnamed function", function() {
-      expect(byeNow.name).toEqual('');
+      expect(window.byeNow.name).toEqual('');
     });
   });
 
