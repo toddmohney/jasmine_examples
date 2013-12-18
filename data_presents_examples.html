@@ -12,60 +12,24 @@
   <script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
   <script type="text/javascript" src="lib/underscore/underscore.min.js"></script>
 
-  <script type="text/javascript" src="spec/helpers/mock_ajax.js"></script>
-  <script type="text/javascript" src="spec/helpers/spec_helper.js"></script>
-  <script type="text/javascript" src="spec/helpers/jasmine_jquery.js"></script>
-
   <script type="text/javascript" src="lib/base.js"></script>
   <script type="text/javascript" src="lib/initializers/fn.js"></script>
   <script type="text/javascript" src="lib/initializers/base.js"></script>
 
   <script type="text/javascript" src="lib/components/basic_component.js"></script>
-  <script type="text/javascript" src="spec/components/basic_component_spec.js"></script>
-
   <script type="text/javascript" src="lib/initializers/basic_initializer.js"></script>
-  <script type="text/javascript" src="spec/initializers/basic_initializer_spec.js"></script>
-
   <script type="text/javascript" src="lib/components/attackers/karate_attack.js"></script>
-  <script type="text/javascript" src="spec/components/attackers/karate_attack_spec.js"></script>
-
   <script type="text/javascript" src="lib/components/attackers/shark_attack.js"></script>
-  <script type="text/javascript" src="spec/components/attackers/shark_attack_spec.js"></script>
-
   <script type="text/javascript" src="lib/components/trap.js"></script>
-  <script type="text/javascript" src="spec/components/trap_spec.js"></script>
 
-  <script type="text/javascript">
-    (function() {
-      var jasmineEnv = jasmine.getEnv();
-      jasmineEnv.updateInterval = 1000;
-
-      var htmlReporter = new jasmine.HtmlReporter();
-
-      jasmineEnv.addReporter(htmlReporter);
-
-      jasmineEnv.specFilter = function(spec) {
-        return htmlReporter.specFilter(spec);
-      };
-
-      var currentWindowOnload = window.onload;
-
-      window.onload = function() {
-        if (currentWindowOnload) {
-          currentWindowOnload();
-        }
-        execJasmine();
-      };
-
-      function execJasmine() {
-        jasmineEnv.execute();
-      }
-
-    })();
-  </script>
+  <script type="text/javascript" src="lib/initializers/shark_trap_initializer.js"></script>
+  <script type="text/javascript" src="lib/initializers/karate_trap_initializer.js"></script>
 
 </head>
 
 <body>
+  <div data-presents='shark-trap'>I'm gonna get shark attacked</div>
+  <br/><br/>
+  <div data-presents='karate-trap'>I'm gonna get karate attacked</div>
 </body>
 </html>
